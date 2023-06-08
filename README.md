@@ -76,7 +76,7 @@ Below are all other optional params:
 To List all available image's uris from gallery:
 Create an instace of ImagePicker():
 ```
-val mImageSaver = ImageSaver(this)
+val mImagePicker = ImagePicker(this)
 ```
 ### Now call it:
 ```
