@@ -6,6 +6,10 @@ PrimeUtil is an efficient Android library designed to simplify the handling of s
 2. Save Get Videos (still in development process)
 3. Save Get Other document files (still in development process)
 
+## Implementation
+```
+ implementation 'io.github.farimarwat:primeutil:1.0'
+```
 
 ## Save Image (with permission):
 This function save image in  public directory and prompts for permission if required. You have not to care about scoped storage.
