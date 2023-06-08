@@ -61,3 +61,66 @@ Below are all other optional params:
 1. imagetype: There are two constants available in the library IMAGE_TYPE_JPEG or IMAGE_TYPE_PNG
 2. onSuccess: This callback back provides objects: The uri and path after saving the image
 3. onError: Provides any exception if occures
+
+## List Image Uris:
+To List all available image's uris from gallery:
+Create an instace of ImagePicker():
+```
+val mImageSaver = ImageSaver(this)
+```
+### Now call it:
+```
+mImagePicker.listImagesUris(
+       self = true,
+       onObtained = {uri ->
+
+       },
+       onCompleted = { list ->
+
+       },
+       onError = {
+
+       }
+   )
+```
+1. self = If it is true then it will list only self created image from gallery (default is false)
+2. onObrained = It is triggered when it founds a uri
+3. onCompleted = It is called when all uris are collected
+4. onError: This callback trigggers when any exception occurs
+
+## Other Helpful Extension functions:
+### Get File Path From Uri
+``` 
+CoroutineScope(Dispatchers.IO).launch {
+      val path = context.getFilePathFromUri(uri)
+  }
+```
+### Get File Path From Uri (Alternate)
+```
+context.getForceFilePathFromUri(
+      uri = uri,
+      onSuccess = { path ->
+
+      },
+      onError = {ex ->
+
+      }
+  )
+```
+**Note: Getting file path with force method uses cache. First it copies the file to cache dir then get it path**
+
+### Getting uri info
+```
+context.getUriInfo(
+         uri =uri,
+         onSucces = { uriInfo ->
+         
+         },
+         onError = {ex ->
+
+         }
+     )
+```
+
+
+  
