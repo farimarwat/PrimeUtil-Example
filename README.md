@@ -93,7 +93,7 @@ mImagePicker.listImagesUris(
        }
    )
 ```
-1. self = If it is true then it will list only self created image from gallery (default is false)
+1. self = If it is true then it will list only self created image from gallery (default is false. Only Work with android 10+)
 2. onObrained = It is triggered when it founds a uri
 3. onCompleted = It is called when all uris are collected
 4. onError: This callback trigggers when any exception occurs
