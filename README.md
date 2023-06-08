@@ -8,7 +8,7 @@ PrimeUtil is an efficient Android library designed to simplify the handling of s
 
 ## Implementation
 ```
-
+    implementation 'io.github.farimarwat:primeutil:1.1'
 ```
 
 ## Save Image (with permission):
