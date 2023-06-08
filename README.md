@@ -1,6 +1,12 @@
 # PrimeUtil Android Library
 PrimeUtil is an efficient Android library designed to simplify the handling of scoped storage. With PrimeUtil, developers can effortlessly save images without the complexities associated with scoped storage implementation. Additionally, the library offers convenient methods to retrieve and manage a list of URIs for images, streamlining the process of accessing and manipulating image resources within the app. Whether you're a beginner or an experienced developer, PrimeUtil provides a hassle-free solution for managing scoped storage in your Android projects.
 
+## Features (without taking care of scoped storage)
+1. Save/Get images 
+2. Save Get Videos (still in development process)
+3. Save Get Other document files (still in development process)
+
+
 ## Save Image (with permission):
 This function save image in  public directory and prompts for permission if required. You have not to care about scoped storage.
 
