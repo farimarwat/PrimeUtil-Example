@@ -8,7 +8,7 @@ PrimeUtil is an efficient Android library designed to simplify the handling of s
 
 ## Implementation
 ```
-    implementation 'io.github.farimarwat:primeutil:1.1'
+    implementation 'io.github.farimarwat:primeutil:1.2'
 ```
 
 ## Save Image (with permission):
@@ -97,6 +97,19 @@ mImagePicker.listImagesUris(
 2. onObrained = It is triggered when it founds a uri
 3. onCompleted = It is called when all uris are collected
 4. onError: This callback trigggers when any exception occurs
+5. 
+### Getting uri info
+```
+mImagePicker.getUriInfo(
+         uri =uri,
+         onSucces = { uriInfo ->
+         
+         },
+         onError = {ex ->
+
+         }
+     )
+```
 
 ## Other Helpful Extension functions:
 ### Get File Path From Uri
@@ -106,6 +119,7 @@ CoroutineScope(Dispatchers.IO).launch {
   }
 ```
 ### Get File Path From Uri (Alternate)
+If the above function fails due to some restrictions then use the below method:
 ```
 context.getForceFilePathFromUri(
       uri = uri,
@@ -119,18 +133,15 @@ context.getForceFilePathFromUri(
 ```
 **Note: Getting file path with force method uses cache. First it copies the file to cache dir then get it path**
 
-### Getting uri info
-```
-context.getUriInfo(
-         uri =uri,
-         onSucces = { uriInfo ->
-         
-         },
-         onError = {ex ->
 
-         }
-     )
-```
 
+## Change Log
+**1.2**
+
+getUriInfo() extension moved to ImagePicker class. So it will not be used as extension function.
+
+**1.1**
+
+Initial Release
 
   
