@@ -43,7 +43,7 @@ mImageSaver.saveImage(
 ```
 1. folder: To create a seperate folder inside "Pictures" and save all your images there
 2. imagetype: There are two constants available in the library IMAGE_TYPE_JPEG or IMAGE_TYPE_PNG
-3. onSuccess: This callback back provides objects: The uri and path after saving the image
+3. onSuccess: This callback provides these two objects: The uri and path after saving the image
 4. onError: Provides any exception if occures
 
 ## Save Image (without permission):
@@ -69,7 +69,7 @@ Below are all other optional params:
      )
 ```
 1. imagetype: There are two constants available in the library IMAGE_TYPE_JPEG or IMAGE_TYPE_PNG
-2. onSuccess: This callback back provides objects: The uri and path after saving the image
+2. onSuccess: This callback provides these two objects: The uri and path after saving the image
 3. onError: Provides any exception if occures
 
 ## List Image Uris:
