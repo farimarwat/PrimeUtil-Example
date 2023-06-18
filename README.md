@@ -51,6 +51,7 @@ mImageSaver.saveImage(
 
 ## Save Image (without permission):
 This is an extension function which works without permission and save image to apps external file dir.
+Remember that saving with this method and in scoped storage, the image will not be showen in gallery
 #### Basic Call
 ```
 context.saveImage(bitmap)
