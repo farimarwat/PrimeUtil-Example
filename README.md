@@ -8,7 +8,7 @@ PrimeUtil is an efficient Android library designed to simplify the handling of s
 
 ## Implementation
 ```
-    implementation 'io.github.farimarwat:primeutil:1.2'
+    implementation 'io.github.farimarwat:primeutil:1.3'
 ```
 
 ## Save Image (with permission):
@@ -32,6 +32,8 @@ mImageSaver.saveImage(
        bitmap = bitmap,
        folder = "MyFolder",
        imagetype = IMAGE_TYPE_JPEG,
+        onStartSave = {
+        }
        onSuccess = { uri, path ->
                     Log.e(TAG, "Uri: $uri")
                     Log.e(TAG,"Path: $path")
@@ -43,8 +45,9 @@ mImageSaver.saveImage(
 ```
 1. folder: To create a seperate folder inside "Pictures" and save all your images there
 2. imagetype: There are two constants available in the library IMAGE_TYPE_JPEG or IMAGE_TYPE_PNG
-3. onSuccess: This callback provides these two objects: The uri and path after saving the image
-4. onError: Provides any exception if occures
+3. onStartSave: Callback when start saving.
+4. onSuccess: This callback provides these two objects: The uri and path after saving the image
+5. onError: Provides any exception if occures
 
 ## Save Image (without permission):
 This is an extension function which works without permission and save image to apps external file dir.
@@ -136,6 +139,11 @@ context.getForceFilePathFromUri(
 
 
 ## Change Log
+**1.3**
+
+1. onStartSaveMethod added.
+2. Jetpack Compose support added.
+
 **1.2**
 
 getUriInfo() extension moved to ImagePicker class. So it will not be used as extension function.
